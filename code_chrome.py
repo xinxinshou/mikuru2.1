@@ -52,7 +52,7 @@ try:
     driver.get(url3.replace('firm','cbase'))
     soup3=BeautifulSoup(driver.page_source,'lxml')
     print('是否失信:',end="")
-    if(re.search('失信',soup3.prettify()) is '失信'):
+    if(re.search('失信',soup3.prettify()) == '失信'):
         print('是')
     else:
         print('否')
